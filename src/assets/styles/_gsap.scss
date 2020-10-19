@@ -1,0 +1,267 @@
+@mixin toggle-one{
+.list-experience-one{
+  /* Pour le toggle */
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 0px #e0e0e0;
+  margin: 0 0 3rem 0;
+  //background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent 3rem);
+
+  nav {
+    position: relative;
+    margin: auto;
+    padding: 2rem 0 7rem 0;
+
+
+  .experience-one
+  /*, .experience-two,
+  .experience-three*/
+  {
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    height: 50rem;  // 25 rem pour une partie estompée
+
+    /*&.toggleHover{
+      overflow: visible;
+      height: 25rem;
+    }*/
+
+    /* Exemple avec grid :
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5rem 1fr 8rem;
+    width: 100%;
+    height: 60rem;
+    */
+
+    .timeline{
+      text-align: center;
+      color: var(--border);
+      padding-right: 2rem;
+      border-right: 1px solid var(--hint);
+      p{
+        margin: 0;
+      }
+    }
+
+    .content{
+      padding: 0 1rem;
+      h3{
+        margin: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+  }
+
+
+  .toggle-one {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 8px solid #e0e0e0;
+      border-radius: 50%;
+      background-color: var(--primary);
+      box-shadow: 0 2px 4px #e0e0e0;
+      cursor: pointer;
+  }
+  }
+}
+}
+
+@mixin toggle-two{
+.list-experience-two{
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 0px #e0e0e0;
+  margin: 0 0 3rem 0;
+
+
+  nav {
+    position: relative;
+    margin: auto;
+    padding: 2rem 0 7rem 0;
+
+
+  .experience-two{
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+
+
+    .timeline{
+      text-align: center;
+      color: var(--border);
+      padding-right: 2rem;
+      border-right: 1px solid var(--hint);
+      p{
+        margin: 0;
+      }
+    }
+    .content{
+      padding: 0 1rem;
+      h3{
+        margin: 0;
+      }
+      p{
+        margin: 0;
+      }
+      ul{
+        margin: 2rem 0;
+        list-style: circle;
+        padding-left: 4rem;
+      }
+    }
+  }
+  .toggle-two {
+    position: absolute;
+    top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 8px solid #e0e0e0;
+      border-radius: 50%;
+      background-color: var(--primary);
+      box-shadow: 0 2px 4px #e0e0e0;
+    cursor: pointer;
+  }
+  }
+}
+}
+
+
+@mixin toggle-three{
+.list-experience-three{
+  /* Pour le toggle */
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 0px #e0e0e0;
+  margin: 0 0 3rem 0;
+
+
+  nav {
+    position: relative;
+    margin: auto;
+    padding: 2rem 0 7rem 0;
+
+  .experience-three{
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+
+
+    .timeline{
+      text-align: center;
+      color: var(--border);
+      padding-right: 2rem;
+      border-right: 1px solid var(--hint);
+      p{
+        margin: 0;
+      }
+    }
+    .content{
+      padding: 0 1rem;
+      h3{
+        margin: 0;
+      }
+      p{
+        margin: 0;
+      }
+      ul{
+        margin: 2rem 0;
+        list-style: circle;
+        padding-left: 4rem;
+      }
+    }
+  }
+  .toggle-three {
+    position: absolute;
+    top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 8px solid #e0e0e0;
+      border-radius: 50%;
+      background-color: var(--primary);
+      box-shadow: 0 2px 4px #e0e0e0;
+    cursor: pointer;
+  }
+  }
+}
+}
+
+
+/* btn pour test :
+
+.btn-visible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    color: var(--dark);
+    font-weight: bold;
+    background:
+    linear-gradient(to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(254, 254, 254, 1),
+    rgba(248, 248, 248, 1),
+    rgba(244, 244, 244, 1));
+    overflow: hidden;
+    cursor: pointer;
+
+    span{
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      transition: transform 0.3s;
+      &::after{
+        content: "PORTFOLIO";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+      }
+      &:hover{
+        span{
+          transform: translateY(-100%);
+        }
+      }
+    }
+
+  }*/
+
+  /* btn de secours*/
+  /*.btn-visible{
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--dark);
+      font-weight: bold;
+      background:
+      linear-gradient(to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(254, 254, 254, 1),
+      rgba(248, 248, 248, 1),
+      rgba(244, 244, 244, 1));
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.2);
+        transition: 0.2s;
+        background: transparent;
+      }
+
+        span::after{
+          content: "VOIR";
+        }
+        &:hover span::after{
+          content: "PORTFOLIO";
+        }
+
+    }*/

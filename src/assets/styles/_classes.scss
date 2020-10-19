@@ -1,0 +1,21 @@
+/* On créé ici une classe générique
+pour des styles qu'on va utiliser beaucoup dans le projet*/
+
+.title{
+  &-small{
+    letter-spacing: 0.5rem;
+    font-size: 1.7rem;
+  }
+}
+
+.text{
+  &-primary{
+    color: var(--primary);
+  }
+  &-hint{
+    color: var(--hint);
+  }
+  &-border{
+    color: var(--border);
+  }
+}

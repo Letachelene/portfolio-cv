@@ -1,0 +1,141 @@
+/* Titre d'entrée*/
+
+@keyframes bounce{
+  0%{
+    transform: rotate(-45deg);
+  }
+  10%{
+    transform: rotate(-35deg);
+  }
+  70%{
+    transform: rotate(20deg);
+  }
+  80%{
+    transform: rotate(-10deg);
+  }
+  90%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce-1{
+  0%{
+    transform: rotate(45deg);
+  }
+  10%{
+    transform: rotate(35deg);
+  }
+  70%{
+    transform: rotate(-20deg);
+  }
+  80%{
+    transform: rotate(10deg);
+  }
+  90%{
+    transform: rotate(-5deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+
+/* Animation portfolio*/
+
+.fadeIn{
+
+  margin: 3rem 1rem;
+  color: var(--fadein);
+  opacity: 0;
+  &.toggleHover{
+    animation: fadeIn 2s linear 1 forwards;
+    animation-delay: 0.5s;
+    & ~ .list-overview{
+      animation: all 2s ease-in-out 3s forwards;
+    }
+  }
+
+    @keyframes fadeIn{
+      to{
+      opacity: 1;
+    }
+    }
+}
+
+
+
+@keyframes unfold-2{
+  to{
+    left: 8%;
+    width: 100px;
+    opacity:1;
+  }
+}
+
+@keyframes unfold-3{
+  to{
+    left: 16%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-4{
+  to{
+    left: 24%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-5{
+  to{
+    left: 32%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-6{
+  to{
+    left: 40%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-7{
+  to{
+    left: 48%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-8{
+  to{
+    left: 56%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-9{
+  to{
+    left: 64%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-10{
+  to{
+    left: 72%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-11{
+  to{
+    left: 80%;
+    width: 100px;
+    opacity: 1;
+  }
+}
