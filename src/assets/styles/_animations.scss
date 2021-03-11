@@ -44,11 +44,11 @@
 
 
 
-/* Animation portfolio*/
+/* Animations portfolio*/
 
 .fadeIn{
 
-  margin: 3rem 1rem;
+  margin: 5rem 1rem 3rem 1rem;
   color: var(--fadein);
   opacity: 0;
   &.toggleHover{
@@ -65,7 +65,6 @@
     }
     }
 }
-
 
 
 @keyframes unfold-2{
@@ -135,6 +134,144 @@
 @keyframes unfold-11{
   to{
     left: 80%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+
+
+.fadeIn-two{
+
+  margin: 5rem 1rem 3rem 1rem;
+  color: var(--fadein);
+  opacity: 0;
+  &.toggleHover{
+    animation: fadeIn-two 2s linear 1 forwards;
+    animation-delay: 0.5s;
+    & ~ .list-overview-two{
+      animation: all 2s ease-in-out 3s forwards;
+    }
+  }
+
+    @keyframes fadeIn-two{
+      to{
+      opacity: 1;
+    }
+    }
+}
+
+
+@keyframes unfold-13{
+  to{
+    left: 8%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-14{
+  to{
+    left: 16%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-15{
+  to{
+    left: 24%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-16{
+  to{
+    left: 32%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-17{
+  to{
+    left: 40%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+
+
+.fadeIn-three{
+
+  margin: 5rem 1rem 3rem 1rem;
+  color: var(--fadein);
+  opacity: 0;
+  &.toggleHover{
+    animation: fadeIn-three 2s linear 1 forwards;
+    animation-delay: 0.5s;
+    & ~ .list-overview-three{
+      animation: all 2s ease-in-out 3s forwards;
+    }
+  }
+
+    @keyframes fadeIn-three{
+      to{
+      opacity: 1;
+    }
+    }
+}
+
+
+@keyframes unfold-19{
+  to{
+    left: 8%;
+    width: 100px;
+    opacity:1;
+  }
+}
+
+@keyframes unfold-20{
+  to{
+    left: 16%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-21{
+  to{
+    left: 24%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-22{
+  to{
+    left: 32%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-23{
+  to{
+    left: 40%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-24{
+  to{
+    left: 48%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-25{
+  to{
+    left: 56%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-26{
+  to{
+    left: 62%;
     width: 100px;
     opacity: 1;
   }

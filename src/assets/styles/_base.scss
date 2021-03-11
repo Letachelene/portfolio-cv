@@ -21,9 +21,13 @@ h6{
   margin: 1rem 0 2rem 0;
 }
 
-ul{
+/*ul{
   list-style: none;
+}*/
+ul {
+  list-style-type: circle;
 }
+
 
 a{
   color: var(--text);

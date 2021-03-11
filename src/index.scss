@@ -36,7 +36,7 @@ les background blue, red, green et purple permettent de visualiser les parties d
 
 header{
   grid-area: header;
-  min-height: 30rem; // === ici 300px puisque 62.5% du rem par défaut dans notre root
+  //min-height: 30rem; // //supprimé puisque shrink on scroll
   background: linear-gradient(to right, var(--primary), var(--light));
   padding: 8rem 5rem;
   text-align: center;
@@ -67,6 +67,7 @@ header{
   }
   p{
     letter-spacing: 0.5rem;
+    margin: 0;
   }
   span{
   /* Attention, span est un inline
@@ -118,19 +119,27 @@ aside{
     p{
       margin: 0 0 2rem 0; // petit rappel : top, right, bottom, left (ordre aiguilles montre)
       font-style: italic;
-      a:hover{
-        background: var(--border);
-        color: var(--primary);
+    }
+
+    .scale-formation{
+     border-radius: 5px;
+     font-style: italic;
+     transition: all 0.2s;
+       &:hover {
+       background: var(--border);
+       transform: scale(1.2);
+       transition: 0.2s;
+        span{
+         color: var(--middle);
+       }
       }
     }
-    .text-hint:hover{
-          background: var(--border);
-          color: var(--middle);
-      }
 
-     .text-border {
+
+     .scale-softskills {
        margin: 0;
        border-radius: 5px;
+       font-style: italic;
        transition: all 0.2s;
        &:hover{
          background: var(--border);
@@ -139,6 +148,25 @@ aside{
          transition: 0.2s;
        }
      }
+
+     .block-langages{
+       display: flex;
+       flex-flow :row wrap;
+       .scale-langages{
+         margin: 0;
+         transition: all 0.2s;
+         border-radius: 5px;
+         font-style: italic;
+         padding: 0 0.5rem;
+         &:hover{
+           color: var(--text);
+           transform: scale(1.3);
+           transition: 0.3s;
+         }
+       }
+     }
+
+
 
 
     .bar-skill{
@@ -206,7 +234,7 @@ aside{
       transition: all 0.2s;
       &:hover{
         background: var(--border);
-        transform: scale(1.3);
+        transform: scale(1.2);
         transition: 0.2s;
         justify-content: center;
         cursor: pointer;
@@ -217,7 +245,7 @@ aside{
           color: var(--primary);
           /*Pour que l'icône se colore au passage du hover */
         }
-        .fa-instagram-square::before{
+        /*.fa-instagram-square::before{
           display: none;
         }
         .fa-instagram-square::after{
@@ -227,7 +255,7 @@ aside{
           font-size: 1.4rem;
           font-style: italic;
           font-family: var(--font-family);
-        }
+        }*/
       }
       i{
         font-size: 2rem;
@@ -248,7 +276,8 @@ main{
   h2{
     margin-bottom: 4rem;
   }
-  p{
+  p,
+  ul{
     letter-spacing: 0.1rem;
     line-height: 3rem;
   }
@@ -257,6 +286,25 @@ main{
   @include toggle-two;
   @include toggle-three;
 
+  hr{
+    margin: 0 40rem;
+    overflow: visible; /* For IE */
+    border: none;
+    border-top: medium double #e0e0e0;
+    color: #e0e0e0;
+    text-align: center;
+    &:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+  }
+
+// Animation des images pour le 1er toggleHover
 
   .list-overview{
     display: flex;
@@ -343,6 +391,7 @@ main{
 
 
 
+
     img {
       height: 100%;
       //opacity:0.2;
@@ -354,16 +403,193 @@ main{
       -moz-transition: opacity 0.7s;
       -webkit-transition: opacity 0.7s;
       -o-transition: opacity 0.7s;
-      transform: scale(1.2);
+      transform: scale(2.5);
       transition: 0.2s;
+          }
+          }
+          }
+
         }
-        }
-      }
 
       }
 
-  }
-}
+  // Animation des images pour le 2e toggleHover
+
+  .list-overview-two{
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    //margin: 0 auto;
+    //justify-content: center;
+    &.toggleHover{
+
+  .elem-overview-two{
+    //border: 1px solid #ddd;
+    background: #ffffff;
+    left: 0;
+    position: absolute;
+    //margin: 1rem 2rem;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    //box-shadow: 0 2px 4px #e0e0e0;
+
+    &.screen-12{
+      opacity: 1;
+    }
+    &.screen-13{
+      opacity: 0;
+      animation: unfold-13 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
+    &.screen-14{
+      opacity: 0;
+      animation: unfold-14 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
+    &.screen-15{
+      opacity: 0;
+      animation: unfold-15 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
+    &.screen-16{
+      opacity: 0;
+      animation: unfold-16 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
+    &.screen-17{
+      opacity: 0;
+      animation: unfold-17 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
+
+
+  img {
+    height: 100%;
+    //opacity:0.2;
+    -moz-transition: opacity 0.9s;
+    -webkit-transition: opacity 0.9s;
+    -o-transition: opacity 0.9s;
+    &:hover{
+    opacity:1;
+    -moz-transition: opacity 0.7s;
+    -webkit-transition: opacity 0.7s;
+    -o-transition: opacity 0.7s;
+    transform: scale(2.5);
+    transition: 0.2s;
+            }
+            }
+            }
+
+          }
+      }
+
+      // Animation des images pour le 3e toggleHover
+
+      .list-overview-three{
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+        //margin: 0 auto;
+        //justify-content: center;
+        &.toggleHover{
+
+          .elem-overview-three{
+            //border: 1px solid #ddd;
+            background: #ffffff;
+            left: 0;
+            position: absolute;
+            //margin: 1rem 2rem;
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            //box-shadow: 0 2px 4px #e0e0e0;
+
+            &.screen-18{
+              opacity: 1;
+            }
+            &.screen-19{
+              opacity: 0;
+              animation: unfold-19 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-20{
+              opacity: 0;
+              animation: unfold-20 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-21{
+              opacity: 0;
+              animation: unfold-21 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-22{
+              opacity: 0;
+              animation: unfold-22 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-23{
+              opacity: 0;
+              animation: unfold-23 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-24{
+              opacity: 0;
+              animation: unfold-24 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-25{
+              opacity: 0;
+              animation: unfold-25 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-26{
+              opacity: 0;
+              animation: unfold-26 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+
+
+            img {
+              height: 100%;
+              //opacity:0.2;
+              -moz-transition: opacity 0.9s;
+              -webkit-transition: opacity 0.9s;
+              -o-transition: opacity 0.9s;
+              &:hover{
+              opacity:1;
+              -moz-transition: opacity 0.7s;
+              -webkit-transition: opacity 0.7s;
+              -o-transition: opacity 0.7s;
+              transform: scale(2.5);
+              transition: 0.2s;
+                }
+                }
+                }
+
+            }
+            }
+
+
+    }
+
+  //}
+
+
+//}
 
 
 footer{
@@ -382,26 +608,31 @@ footer{
   form{
     display: flex;
     align-items: center;
+    //flex-direction: column;
     h2{
       margin-bottom: 3rem;
     }
-    .prefix, .postfix{
+    .prefix,
+    .postfix{
       background: linear-gradient(to right, var(--dark), var(--light));
       padding: 1rem 2rem;
       color: #fff;
       font-size: 2rem;
+
     }
     .prefix{
       border-top-left-radius: 0.5rem;
       border-bottom-left-radius: 0.5rem;
     }
+
+
     button{
       background: var(--text);
       border: 0;
       cursor: pointer;
       transition: all 0.2s;
       &:hover{
-        opacity: 0.8;
+        opacity: 0.7;
       }
       .postfix{
         border-top-right-radius: 0.5rem;
@@ -414,12 +645,15 @@ footer{
       padding: 1rem 2rem;
       line-height: 2rem;
       min-width: 400px;
+      font-size: 1.6rem;
       @include xs{
-        min-width: 200px;
+      min-width: 200px;
       }
       &::placeholder{
         color: var(--text);
       }
     }
+
   }
+
 }
