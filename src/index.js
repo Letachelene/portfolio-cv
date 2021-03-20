@@ -25,58 +25,47 @@ const tweenThree = TweenLite.from(".experience-three", 0.5, {
 });
 
 
-const togglePlay =
+const togglePlayOne =
   TweenLite.to(".toggle-one", 0.5,
-  { background: "#fff", color: "var(--primary)", reversed: true})
+  { background: "#fff", color: "var(--primary)",
+  animation: "scaleNumber 1.5s infinite",
+  reversed: true})
   .reverse();
 
   TweenLite.from(".toggle-one", 0.5,
-  {background: "var(--primary)", color: "var(--border)", played: true})
+  { played: true })
   .play();
 
-
-
-
-/*const togglePlay =
-    TweenLite.from(".toggle-one", 0.5,
-    { background: "#fff", color: "var(--primary)", reversed: true})
+const togglePlayTwo =
+  TweenLite.to(".toggle-two", 0.5,
+    { background: "#fff", color: "var(--primary)",
+    animation: "scaleNumber 1.5s infinite",
+    reversed: true})
     .reverse();
 
-const toggleReset =
-  TweenLite.to(".toggle-one", 0.5,
-  {background: "var(--primary)", color: "#fff", played: true})
-  .play();*/
+  TweenLite.from(".toggle-two", 0.5,
+    { played: true })
+    .play();
 
+const togglePlayThree =
+    TweenLite.to(".toggle-three", 0.5,
+      { background: "#fff", color: "var(--primary)",
+      animation: "scaleNumber 1.5s infinite",
+      reversed: true})
+      .reverse();
 
-
-
-  // Trouver la formule pour changer le X en 1 dans le reverse() : cad, qd le bouton remonte, retour à toggle-one
-
-
-//const togglePlay = TweenMax.to(".togglePlay", 1, { opacity: 0.25 }).reverse();
-
-
-// TEST POUR CHANGER LE BOUTON AU HOVER FERME ET HOVER OUVERT
-// le bouton devient vert quand la fonction est true
-// donc il faut enfermer tout l'event dans une seule fonction, avec unfalse et un true
-
-/*  document.querySelector(".toggle-one").addEventListener("mouseover", () =>{
-  document.querySelector(".toggle-one").style.background = "green";
-    doCoolStuffOne();
-  }, true);*/
-
+    TweenLite.from(".toggle-three", 0.5,
+      { played: true })
+      .play();
 
 
 
 /* ANIMATION SIMPLE, pour que le PORFOLIO SE DEROULE*/
 document.querySelector(".toggle-one").addEventListener("mouseover", (e) =>{
-  e.preventDefault();
-  document.querySelector(".fadeIn").classList.add("toggleHover");
+  document.querySelector(".fadeIn-one").classList.add("toggleHover");
   document.querySelector(".list-overview").classList.add("toggleHover");
-  //document.querySelector(".toggle-one").classList.add("togglePlay");
-  //document.querySelector(".togglePlay").style.background = "blue";
-  //document.querySelector(".togglePlay").classList.add("toggleReset");
-  togglePlay.reversed(!togglePlay.reversed());
+  document.querySelector(".wrapper").classList.add("toggleHover");
+  togglePlayOne.reversed(!togglePlayOne.reversed());
   doCoolStuffOne();
 }, false);
 
@@ -85,12 +74,15 @@ document.querySelector(".toggle-one").addEventListener("mouseover", (e) =>{
 document.querySelector(".toggle-two").addEventListener("mouseover", () =>{
   document.querySelector(".fadeIn-two").classList.add("toggleHover");
   document.querySelector(".list-overview-two").classList.add("toggleHover");
+  togglePlayTwo.reversed(!togglePlayTwo.reversed());
   doCoolStuffTwo();
 }, false);
 
 document.querySelector(".toggle-three").addEventListener("mouseover", () =>{
   document.querySelector(".fadeIn-three").classList.add("toggleHover");
   document.querySelector(".list-overview-three").classList.add("toggleHover");
+  document.querySelector(".wrapper-three").classList.add("toggleHover");
+  togglePlayThree.reversed(!togglePlayThree.reversed());
   doCoolStuffThree();
 }, false);
 

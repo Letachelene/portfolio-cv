@@ -1,11 +1,14 @@
+
 @mixin toggle-number{
   color: var(--border);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
-  font-family: "roboto";
+  font-family: var(--font-number);
+  background: var(--primary);
 }
+
 
 @mixin toggle-one{
 .list-experience-one{
@@ -28,7 +31,7 @@
     display: flex;
     margin: 0;
     overflow: hidden;
-    height: 60rem;  // 25 rem pour une partie estompée
+    height: 65rem;  // 25 rem pour une partie estompée
 
     /*&.toggleHover{
       overflow: visible;
@@ -78,12 +81,13 @@
       box-shadow: 0 2px 4px #e0e0e0;
       cursor: pointer;
       @include toggle-number;
+      @include scaleNumber;
+
   }
 
-  /*.toggle-one::before{
-    content: "1";
-  }
 
+
+  /*
  .togglePlay::before{
     display: none;
   }
@@ -144,10 +148,11 @@
       height: 50px;
       border: 8px solid #e0e0e0;
       border-radius: 50%;
-      background-color: var(--primary);
+      //background-color: var(--primary);
       box-shadow: 0 2px 4px #e0e0e0;
       cursor: pointer;
       @include toggle-number;
+      @include scaleNumber;
   }
   }
 }
@@ -202,10 +207,11 @@
       height: 50px;
       border: 8px solid #e0e0e0;
       border-radius: 50%;
-      background-color: var(--primary);
+      //background-color: var(--primary);
       box-shadow: 0 2px 4px #e0e0e0;
       cursor: pointer;
       @include toggle-number;
+      @include scaleNumber;
   }
   }
 }
