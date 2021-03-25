@@ -74,6 +74,7 @@ document.querySelector(".toggle-one").addEventListener("mouseover", (e) =>{
 document.querySelector(".toggle-two").addEventListener("mouseover", () =>{
   document.querySelector(".fadeIn-two").classList.add("toggleHover");
   document.querySelector(".list-overview-two").classList.add("toggleHover");
+  document.querySelector(".wrapper-two").classList.add("toggleHover");
   togglePlayTwo.reversed(!togglePlayTwo.reversed());
   doCoolStuffTwo();
 }, false);
@@ -152,14 +153,22 @@ window.addEventListener('resize', () =>{
 
 
 /* Bouton overflow*/
-
 const btn = document.querySelector(".btn-overflow");
 const training = document.querySelector(".text-overflow");
 const experience = document.querySelector(".experience-one");
 
+const btnTwo = document.querySelector(".btn-overflow-two");
+const eBooks = document.querySelector(".text-overflow-two");
+const experienceTwo = document.querySelector(".experience-two");
+
 btn.addEventListener("click", (e) =>{
   training.style.display = training.style.display === "" ? "flex" : "";
-  experience.style.height = experience.style.height == "90rem" ? "60rem" : "90rem";
+  experience.style.height = experience.style.height == "90rem" ? "65rem" : "90rem";
+});
+
+btnTwo.addEventListener("click", (e) =>{
+  eBooks.style.display = eBooks.style.display === "" ? "flex" : "";
+  experienceTwo.style.height = experienceTwo.style.height == "95rem" ? "70rem" : "95rem";
 });
 
 

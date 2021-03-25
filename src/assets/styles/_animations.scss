@@ -60,12 +60,15 @@
 
 
 /* Animations portfolio*/
-
-.fadeIn-one{
-
-  margin: 5rem 1rem 3rem 1rem;
+@mixin fadeTitle{
+  margin: 5rem 1rem 3rem 0;
   color: var(--dark);
   opacity: 0;
+  font-size: 1.8rem;
+}
+
+.fadeIn-one{
+  @include fadeTitle;
   &.toggleHover{
     animation: fadeIn-one 2s linear 1 forwards;
     animation-delay: 0.5s;
@@ -84,7 +87,7 @@
 
 @keyframes unfold-2{
   to{
-    left: 8%;
+    left: 9%;
     width: 100px;
     opacity:1;
   }
@@ -92,63 +95,63 @@
 
 @keyframes unfold-3{
   to{
-    left: 16%;
+    left: 18%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-4{
   to{
-    left: 24%;
+    left: 27%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-5{
   to{
-    left: 32%;
+    left: 36%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-6{
   to{
-    left: 40%;
+    left: 45%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-7{
   to{
-    left: 48%;
+    left: 54%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-8{
   to{
-    left: 56%;
+    left: 63%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-9{
   to{
-    left: 64%;
+    left: 72%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-10{
   to{
-    left: 72%;
+    left: 81%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-11{
   to{
-    left: 80%;
+    left: 90%;
     width: 100px;
     opacity: 1;
   }
@@ -156,10 +159,7 @@
 
 
 .fadeIn-two{
-
-  margin: 5rem 1rem 3rem 1rem;
-  color: var(--dark);
-  opacity: 0;
+  @include fadeTitle;
   &.toggleHover{
     animation: fadeIn-two 2s linear 1 forwards;
     animation-delay: 0.5s;
@@ -178,35 +178,49 @@
 
 @keyframes unfold-13{
   to{
-    left: 8%;
+    left: 9%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-14{
   to{
-    left: 16%;
+    left: 18%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-15{
   to{
-    left: 24%;
+    left: 27%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-16{
   to{
-    left: 32%;
+    left: 36%;
     width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-17{
   to{
-    left: 40%;
+    left: 45%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-17bis{
+  to{
+    left: 54%;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-17ter{
+  to{
+    left: 63%;
     width: 100px;
     opacity: 1;
   }
@@ -214,10 +228,7 @@
 
 
 .fadeIn-three{
-
-  margin: 5rem 1rem 3rem 1rem;
-  color: var(--dark);
-  opacity: 0;
+  @include fadeTitle;
   &.toggleHover{
     animation: fadeIn-three 2s linear 1 forwards;
     animation-delay: 0.5s;
@@ -292,16 +303,23 @@
   }
 }
 
+
 /* Animation texte défilant */
 @mixin textSlider{
   margin: 12rem 0 0 0;
   display: flex;
   width: 100%;
   opacity: 0;
+  z-index: -1;
+  font-size: 1.7rem;
+  font-family: 'Pangolin';
+  background: var(--backrgoundTextSlider);
+  padding: 0.3rem 0;
+
+
 
   &.toggleHover{
-   //animation-timing-function: cubic-bezier(.42,0,.58,1);
-   animation: slider 0.5s ease-out forwards;
+   animation: slider 0.5s ease-in-out forwards;
    animation-delay: 3s;
    transition: slider 0.5s;
    }
@@ -315,11 +333,19 @@
 }
 }
 
+.wrapper-two{
+  background: blue;
+  @include textSlider;
+  @keyframes slider{
+     0%   { transform: translateX(100%); opacity:1;}
+    100% {transform: translateX(0%); opacity:1;}
+  }
+}
+
 
 .wrapper-three{
   @include textSlider;
-  @keyframes slider-three{
-
+  @keyframes slider{
      0%   { transform: translateX(100%); opacity:1;}
     100% {transform: translateX(0%); opacity:1;}
   }

@@ -1,38 +1,69 @@
 // Bouton & texte OVERFLOW
 
-.overflow-visible{
+@mixin overflowVisible{
   display: flex;
   flex-flow: row wrap;
   //margin: 15rem 0 0 0;
-  margin: 5rem 0 0 0;
-  .btn-overflow {
-    font-size: 1.5rem;
-    background: var(--border);
-    border: none;
-    font-weight: bold;
-    padding: .5rem 2rem;
-    margin: 0 0 1rem 0;
-    border-radius: 35px;
-    cursor: pointer;
+  margin: 2.5rem 0 0 0;
+}
 
-      &:hover {
-        background: var(--hint);
-        color: #fff;
-          }
-      &:focus {
-        outline-style: none;
-      }
+@mixin btnOverflow{
+  font-size: 1.5rem;
+  background: var(--border);
+  border: none;
+  font-weight: bold;
+  padding: .5rem 2rem;
+  margin: 0 0 1rem 0;
+  border-radius: 35px;
+  cursor: pointer;
+
+    &:hover {
+      background: var(--hint);
+      color: #fff;
+        }
+    &:focus {
+      outline-style: none;
+}
+}
+
+@mixin textOverflow{
+  display: none;
+  //height: 30rem;
+  background: var(--overflow);
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  border-radius: 10px;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+
+.overflow-visible{
+  @include overflowVisible;
+  .btn-overflow {
+    @include btnOverflow;
     }
 
 
     .text-overflow{
-        display: none;
-        height: 30rem;
-        background: var(--overflow);
-        padding: 1.5rem 1.5rem 1.5rem 4rem;
-        border-radius: 10px;
-        flex-flow: row wrap;
-        align-items: center;
+        @include textOverflow;
+    }
+
+}
+
+
+.overflowTwo-visible{
+  @include overflowVisible;
+  .btn-overflow-two {
+    @include btnOverflow;
+    }
+
+
+    .text-overflow-two{
+        @include textOverflow;
+        p{
+          margin-left: -2rem !important;
+          font-weight: bold;
+        }
     }
 
 }

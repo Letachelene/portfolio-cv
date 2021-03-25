@@ -98,7 +98,10 @@ header{
       width: 100%;
       height: auto;
       margin-top: -50px;
-
+    }
+    img:hover{
+      filter: brightness(110%);
+      cursor: pointer;
     }
 
   }
@@ -310,7 +313,6 @@ main{
     display: flex;
     flex-flow: row wrap;
     position: relative;
-    z-index: 1;
     //margin: 0 auto;
     //justify-content: center;
     &.toggleHover{
@@ -420,7 +422,6 @@ main{
     display: flex;
     flex-flow: row wrap;
     position: relative;
-    z-index: 1;
     //margin: 0 auto;
     //justify-content: center;
     &.toggleHover{
@@ -469,6 +470,18 @@ main{
       animation-timing-function: cubic-bezier(.42,0,.58,1);
       //animation-delay: 1.5s;
     }
+    &.screen-17bis{
+      opacity: 0;
+      animation: unfold-17bis 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
+    &.screen-17ter{
+      opacity: 0;
+      animation: unfold-17ter 1s forwards;
+      animation-timing-function: cubic-bezier(.42,0,.58,1);
+      //animation-delay: 1.5s;
+    }
 
 
   img {
@@ -497,7 +510,7 @@ main{
         display: flex;
         flex-flow: row wrap;
         position: relative;
-        z-index: 1;
+
         //margin: 0 auto;
         //justify-content: center;
         &.toggleHover{
