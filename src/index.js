@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);*/
 
 
+
 const tweenOne = TweenLite.from(".experience-one", 0.5, {
     height: 0,
     paused: true,
@@ -87,15 +88,10 @@ document.querySelector(".toggle-three").addEventListener("mouseover", () =>{
   doCoolStuffThree();
 }, false);
 
-//document.querySelector(".toggle-one").addEventListener("mouseover", doCoolStuffOne);
-
-//document.querySelector(".toggle-two").addEventListener("mouseover", doCoolStuffTwo);
-//document.querySelector(".toggle-three").addEventListener("mouseover", doCoolStuffThree);
 
 
 function doCoolStuffOne() {
     tweenOne.reversed() ? tweenOne.play() : tweenOne.reverse();
-    //togglePlay.reversed() ? togglePlay.play() : togglePlay.reverse();
 }
 
 function doCoolStuffTwo() {
@@ -107,22 +103,6 @@ function doCoolStuffThree() {
 
 }
 
-/*window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.querySelector("header").style.padding = "3rem 5rem";
-    document.querySelector("header").style.height = "20rem";
-    document.querySelector("h1").style.fontSize = "4rem";
-  }
-
-  else {
-    document.querySelector("header").style.padding = "8rem 5rem";
-    document.querySelector("header").style.height = "30rem";
-    document.querySelector("h1").style.fontSize = "6rem";
-
-  }
-}*/
 
 const scrollFunction =(e) => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -163,7 +143,7 @@ const experienceTwo = document.querySelector(".experience-two");
 
 btn.addEventListener("click", (e) =>{
   training.style.display = training.style.display === "" ? "flex" : "";
-  experience.style.height = experience.style.height == "90rem" ? "65rem" : "90rem";
+  experience.style.height = experience.style.height == "90rem" ? "70rem" : "90rem";
 });
 
 btnTwo.addEventListener("click", (e) =>{
@@ -173,46 +153,7 @@ btnTwo.addEventListener("click", (e) =>{
 
 
 
-/* Code pour l'overflow VOIR
-const btn = document.querySelector(".btn-visible");
-const expOne = document.querySelector(".experience-one");
-const toggleOne = document.querySelector(".toggle-one");
-//const fadeIn = document.querySelector(".fadeIn").classList.add("toggleHover");
-//const list = document.querySelector(".list-overview").classList.add("toggleHover");*/
-
-/*btn.addEventListener("click", (e) =>{
-  expOne.style.overflow = expOne.style.overflow === "visible" ? "hidden" : "visible";
-  toggleOne.style.visibility = toggleOne.style.visibility === "hidden" ? "visible" : "hidden";
-  document.querySelector(".fadeIn").classList.add("toggleHover");
-  document.querySelector(".list-overview").classList.add("toggleHover");
-  doCoolStuffOne();
-}, false);*/
-
-/* LE CODE QUI MARCHE LE MIEUX
-
-document.querySelector(".toggle-one").addEventListener("mouseover", () =>{
-  btn.addEventListener("click", (e) =>{
-    expOne.style.overflow = expOne.style.overflow === "visible" ? "hidden" : "visible";
-    toggleOne.style.visibility = toggleOne.style.visibility === "hidden" ? "visible" : "hidden";
-    document.querySelector(".fadeIn").classList.add("toggleHover");
-    document.querySelector(".list-overview").classList.add("toggleHover");
-  })
-    doCoolStuffOne();
-}, false);*/
-
- /*document.querySelector(".toggle-one").addEventListener("mouseover", () =>{
-  btn.addEventListener("click", (e) =>{
-    expOne.style.overflow = expOne.style.overflow === "visible" ? "hidden" : "visible";
-    toggleOne.style.visibility = toggleOne.style.visibility === "hidden" ? "visible" : "hidden";
-    fadeIn.style.visibility = fadeIn.style.visibility === "hidden" ? "visible" : "hidden";
-    list.style.visibility = list.style.visibility === "hidden" ? "visible" : "hidden";
-  })
-    doCoolStuffOne();
-}, false);*/
-
-
 doCoolStuffOne();
 doCoolStuffTwo();
 doCoolStuffThree();
 scrollFunction();
-//toggleReset();

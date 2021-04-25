@@ -31,7 +31,7 @@
     display: flex;
     margin: 0;
     overflow: hidden;
-    height: 65rem;  // 25 rem pour une partie estompée
+    height: 70rem;  // 25 rem pour une partie estompée
 
     /*&.toggleHover{
       overflow: visible;
@@ -140,8 +140,8 @@
     }
   }
   .toggle-two {
-    position: absolute;
-    top: 100%;
+      position: absolute;
+      top: 100%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 50px;
@@ -176,7 +176,10 @@
     display: flex;
     margin: 0;
     overflow: hidden;
-    height: 65rem;
+    height: 70rem;
+    /*@include xl{
+      height: 90rem;
+    }*/
 
 
     .timeline{

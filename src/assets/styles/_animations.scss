@@ -1,3 +1,4 @@
+
 /* Titre d'entrée*/
 
 @keyframes bounce{
@@ -88,71 +89,73 @@
 @keyframes unfold-2{
   to{
     left: 9%;
-    width: 100px;
+    max-width: 100px;
     opacity:1;
   }
+
 }
 
 @keyframes unfold-3{
   to{
     left: 18%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
+
 @keyframes unfold-4{
   to{
     left: 27%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-5{
   to{
     left: 36%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-6{
   to{
     left: 45%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-7{
   to{
     left: 54%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-8{
   to{
     left: 63%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-9{
   to{
     left: 72%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-10{
   to{
     left: 81%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-11{
   to{
     left: 90%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
@@ -179,49 +182,49 @@
 @keyframes unfold-13{
   to{
     left: 9%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-14{
   to{
     left: 18%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-15{
   to{
     left: 27%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-16{
   to{
     left: 36%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-17{
   to{
     left: 45%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
-@keyframes unfold-17bis{
+@keyframes unfold-18{
   to{
     left: 54%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
-@keyframes unfold-17ter{
+@keyframes unfold-19{
   to{
     left: 63%;
-    width: 100px;
+    max-width: 100px;
     opacity: 1;
   }
 }
@@ -245,70 +248,71 @@
 }
 
 
-@keyframes unfold-19{
+@keyframes unfold-21{
   to{
-    left: 8%;
-    width: 100px;
+    left: 9%;
+    max-width: 100px;
     opacity:1;
   }
 }
 
-@keyframes unfold-20{
-  to{
-    left: 16%;
-    width: 100px;
-    opacity: 1;
-  }
-}
-@keyframes unfold-21{
-  to{
-    left: 24%;
-    width: 100px;
-    opacity: 1;
-  }
-}
 @keyframes unfold-22{
   to{
-    left: 32%;
-    width: 100px;
+    left: 18%;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-23{
   to{
-    left: 40%;
-    width: 100px;
+    left: 27%;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-24{
   to{
-    left: 48%;
-    width: 100px;
+    left: 36%;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-25{
   to{
-    left: 56%;
-    width: 100px;
+    left: 45%;
+    max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-26{
   to{
-    left: 62%;
-    width: 100px;
+    left: 54%;
+    max-width: 100px;
     opacity: 1;
   }
 }
+@keyframes unfold-27{
+  to{
+    left: 63%;
+    max-width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-28{
+  to{
+    left: 70%;
+    max-width: 100px;
+    opacity: 1;
+  }
+}
+
 
 
 /* Animation texte défilant */
 @mixin textSlider{
   margin: 12rem 0 0 0;
   display: flex;
-  width: 100%;
+  max-width: 100%;
   opacity: 0;
   z-index: -1;
   font-size: 1.7rem;
