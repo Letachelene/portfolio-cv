@@ -36,7 +36,6 @@ les background blue, red, green et purple permettent de visualiser les parties d
 
 header{
   grid-area: header;
-  //min-height: 30rem; // //supprimé puisque shrink on scroll
   background: linear-gradient(to right, var(--primary), var(--light));
   padding: 8rem 5rem;
   text-align: center;
@@ -44,25 +43,35 @@ header{
   position: sticky;
   top: 0;
   z-index: 1;
-  @include xs{
+  /*@include xs{
     padding: 5rem 2rem;
   }
+  @include sm{
+    padding: 5rem 2rem;
+  }
+  @include md{
+    padding: 5rem 2rem;
+  }*/
   h1{
-    font-size: 6rem;
+    //font-size: 6rem;
     line-height: 8rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 3rem;
     @include xs{
-      font-size: 4rem;
+      font-size: 2.5rem !important;
+      letter-spacing: 0.5rem;
     }
     @include sm{
-      font-size: 4rem;
+      font-size: 3rem !important;
+      letter-spacing: 2rem;
     }
     @include md{
-      font-size: 4rem;
+      font-size: 2.8rem !important;
+      letter-spacing: 1rem;
     }
     @include xl{
-      font-size: 5rem;
+      font-size: 3.5rem !important;
+      letter-spacing: 2.5rem;
     }
   }
   p{
@@ -504,6 +513,7 @@ main{
     -o-transition: opacity 0.7s;
     transform: scale(2.5);
     transition: 0.2s;
+
             }
             }
             }
@@ -531,6 +541,7 @@ main{
             max-width: 100px;
             height: 100px;
             padding: 0;
+
             //box-shadow: 0 2px 4px #e0e0e0;
 
             &.screen-20{
@@ -599,13 +610,102 @@ main{
               -o-transition: opacity 0.7s;
               transform: scale(2.5);
               transition: 0.2s;
+
                 }
+
                 }
                 }
 
             }
             }
 
+
+    }
+
+
+    // media queries des animations unfold
+
+    main .list-overview.toggleHover .elem-overview,
+    main .list-overview-two.toggleHover .elem-overview-two,
+    main .list-overview-three.toggleHover .elem-overview-three
+    {
+      @include xl{
+        position: static;
+        margin: 0 5rem 5rem 0;
+        min-width: 75%;
+        height: auto;
+      }
+      @include md{
+        position: static;
+        margin: 0 5rem 5rem 0;
+        min-width: 100%;
+        height: auto;
+      }
+      @include sm{
+        position: static;
+        margin: 0 5rem 5rem 0;
+        min-width: 100%;
+        height: auto;
+      }
+      @include xs{
+        position: static;
+        margin: 0 5rem 5rem 0;
+        min-width: 100%;
+        height: auto;
+      }
+    }
+
+    // media queries du resizing images
+
+    main .list-overview.toggleHover .elem-overview img,
+    main .list-overview-two.toggleHover .elem-overview-two img,
+    main .list-overview-three.toggleHover .elem-overview-three img
+    {
+      @include xl{
+        min-width: 75%;
+        height: auto;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+      @include md{
+        min-width: 100%;
+        height: auto;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+      @include sm{
+        min-width: 100%;
+        height: auto;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+      @include xs{
+        min-width: 100%;
+        height: auto;
+        &:hover{
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .wrapper.toggleHover,
+    .wrapper-two.toggleHover,
+    .wrapper-three.toggleHover{
+      @include xl{
+        margin: 0 0 2rem 0;
+      }
+      @include md{
+        margin: 0 0 2rem 0;
+      }
+      @include sm{
+        margin: 0 0 2rem 0;
+      }
+      @include xs{
+        margin: 0 0 2rem 0;
+      }
 
     }
 
