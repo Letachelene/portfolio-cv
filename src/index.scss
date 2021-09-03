@@ -9,6 +9,8 @@ les background blue, red, green et purple permettent de visualiser les parties d
     "picture header" auto
     "aside main" 1fr
     "footer footer" auto
+    "copyright copyright" auto
+    "copyright copyright" auto
     / 350px auto;
     min-height: 100vh;
   /*ci-dessous, les mixins correspondant à la responsivité selon 4 formats */
@@ -20,6 +22,7 @@ les background blue, red, green et purple permettent de visualiser les parties d
         "picture" auto
         "aside" auto
         "footer" auto
+        "copyright" auto
         / auto;
     }
     @include sm{
@@ -29,6 +32,7 @@ les background blue, red, green et purple permettent de visualiser les parties d
         "picture" auto
         "aside" auto
         "footer" auto
+        "copyright" auto
         / auto;
     }
 
@@ -175,7 +179,7 @@ aside{
          padding: 0 0.5rem;
          &:hover{
            color: var(--text);
-           transform: scale(1.3);
+           transform: scale(1.5);
            transition: 0.3s;
          }
        }
@@ -335,7 +339,7 @@ main{
 
     .elem-overview{
       border: 1px solid #ddd;
-      background: #ffffff;
+      background: #eee;
       left: 0;
       position: absolute;
       //margin: 1rem 2rem;
@@ -413,12 +417,12 @@ main{
 
     img {
       height: 100%;
-      //opacity:0.2;
+      //opacity:0.7;
       -moz-transition: opacity 0.9s;
       -webkit-transition: opacity 0.9s;
       -o-transition: opacity 0.9s;
       &:hover{
-      opacity:1;
+      opacity:1 !important;
       -moz-transition: opacity 0.7s;
       -webkit-transition: opacity 0.7s;
       -o-transition: opacity 0.7s;
@@ -444,7 +448,7 @@ main{
 
   .elem-overview-two{
     //border: 1px solid #ddd;
-    background: #ffffff;
+    background: #eee;
     left: 0;
     position: absolute;
     //margin: 1rem 2rem;
@@ -502,7 +506,7 @@ main{
 
   img {
     height: 100%;
-    //opacity:0.2;
+    //opacity:0.7;
     -moz-transition: opacity 0.9s;
     -webkit-transition: opacity 0.9s;
     -o-transition: opacity 0.9s;
@@ -523,18 +527,19 @@ main{
 
       // Animation des images pour le 3e toggleHover
 
+
+
       .list-overview-three{
         display: flex;
         flex-flow: row wrap;
         position: relative;
-
         //margin: 0 auto;
-        //justify-content: center;
+
         &.toggleHover{
 
           .elem-overview-three{
             //border: 1px solid #ddd;
-            background: #ffffff;
+            background: #eee;
             left: 0;
             position: absolute;
             //margin: 1rem 2rem;
@@ -565,25 +570,25 @@ main{
               animation-timing-function: cubic-bezier(.42,0,.58,1);
               //animation-delay: 1.5s;
             }
-            &.screen-24{
+            &.screen-24 {
               opacity: 0;
               animation: unfold-24 1s forwards;
               animation-timing-function: cubic-bezier(.42,0,.58,1);
               //animation-delay: 1.5s;
             }
-            &.screen-25{
+            &.screen-25 {
               opacity: 0;
               animation: unfold-25 1s forwards;
               animation-timing-function: cubic-bezier(.42,0,.58,1);
               //animation-delay: 1.5s;
             }
-            &.screen-26{
+            &.screen-26 {
               opacity: 0;
               animation: unfold-26 1s forwards;
               animation-timing-function: cubic-bezier(.42,0,.58,1);
               //animation-delay: 1.5s;
             }
-            &.screen-27{
+            &.screen-27 {
               opacity: 0;
               animation: unfold-27 1s forwards;
               animation-timing-function: cubic-bezier(.42,0,.58,1);
@@ -595,11 +600,23 @@ main{
               animation-timing-function: cubic-bezier(.42,0,.58,1);
               //animation-delay: 1.5s;
             }
+            &.screen-29{
+              opacity: 0;
+              animation: unfold-29 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
+            &.screen-30{
+              opacity: 0;
+              animation: unfold-30 1s forwards;
+              animation-timing-function: cubic-bezier(.42,0,.58,1);
+              //animation-delay: 1.5s;
+            }
 
 
             img {
               height: 100%;
-              //opacity:0.2;
+              //opacity:0.7;
               -moz-transition: opacity 0.9s;
               -webkit-transition: opacity 0.9s;
               -o-transition: opacity 0.9s;
@@ -633,6 +650,8 @@ main{
         position: static;
         margin: 0 5rem 5rem 0;
         min-width: 75%;
+        //max-width: 60%;
+        //text-align: center;
         height: auto;
       }
       @include md{
@@ -696,15 +715,19 @@ main{
     .wrapper-three.toggleHover{
       @include xl{
         margin: 0 0 2rem 0;
+        font-size: 2rem;
       }
       @include md{
         margin: 0 0 2rem 0;
+        font-size: 2rem;
       }
       @include sm{
         margin: 0 0 2rem 0;
+        font-size: 2rem;
       }
       @include xs{
         margin: 0 0 2rem 0;
+        font-size: 2rem;
       }
 
     }
@@ -779,4 +802,37 @@ footer{
 
   }
 
+
+}
+
+// Barre mentions légales
+
+.copyright{
+  grid-area: copyright;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0 2rem 5rem;
+  justify-content: flex-start;
+  background: var(--copyright);
+  span{
+    color: var(--hint);
+  }
+}
+
+// Bandeau cookie : visible/hidden
+
+.cookiebar {
+@include cookieBar;
+
+.button-cookie-ok{
+  @include buttonCookie;
+}
+
+.button-cookie-no{
+  @include buttonCookie;
+}
+}
+
+.is-hidden{
+  display: none;
 }

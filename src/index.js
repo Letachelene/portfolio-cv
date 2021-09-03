@@ -153,7 +153,30 @@ btnTwo.addEventListener("click", (e) =>{
 
 
 
+
+// BOUTONS COOKIES FONCTIONNELS
+
+
+  const buttonCookieok = document.querySelector(".button-cookie-ok");
+  const buttonCookieno = document.querySelector(".button-cookie-no");
+  const cookieBar = document.querySelector(".cookiebar");
+
+
+  buttonCookieok.addEventListener("click", (e) =>{
+    cookieBar.classList.add("is-hidden");
+    console.log('Yes');
+  });
+
+  buttonCookieno.addEventListener("click", (e) =>{
+    cookieBar.classList.add("is-hidden");
+    console.log('No');
+  });
+
+
+
+
 doCoolStuffOne();
 doCoolStuffTwo();
 doCoolStuffThree();
 scrollFunction();
+//extractCookies();

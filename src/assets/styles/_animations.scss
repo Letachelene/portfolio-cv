@@ -88,7 +88,6 @@
 @keyframes unfold-2{
   to{
     left: 9%;
-    //max-width: 100px;
     opacity:1;
   }
 
@@ -97,7 +96,6 @@
 @keyframes unfold-3{
   to{
     left: 18%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
@@ -105,56 +103,48 @@
 @keyframes unfold-4{
   to{
     left: 27%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-5{
   to{
     left: 36%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-6{
   to{
     left: 45%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-7{
   to{
     left: 54%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-8{
   to{
     left: 63%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-9{
   to{
     left: 72%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-10{
   to{
     left: 81%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-11{
   to{
     left: 90%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
@@ -181,49 +171,42 @@
 @keyframes unfold-13{
   to{
     left: 9%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-14{
   to{
     left: 18%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-15{
   to{
     left: 27%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-16{
   to{
     left: 36%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-17{
   to{
     left: 45%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-18{
   to{
     left: 54%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-19{
   to{
     left: 63%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
@@ -250,7 +233,6 @@
 @keyframes unfold-21{
   to{
     left: 9%;
-    //max-width: 100px;
     opacity:1;
   }
 }
@@ -258,49 +240,54 @@
 @keyframes unfold-22{
   to{
     left: 18%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-23{
   to{
     left: 27%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-24{
   to{
     left: 36%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-25{
   to{
     left: 45%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-26{
   to{
     left: 54%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-27{
   to{
     left: 63%;
-    //max-width: 100px;
     opacity: 1;
   }
 }
 @keyframes unfold-28{
   to{
     left: 70%;
-    //max-width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes unfold-29{
+  to{
+    left: 77%;
+    opacity: 1;
+  }
+}
+@keyframes unfold-30{
+  to{
+    left: 84%;
     opacity: 1;
   }
 }
@@ -309,7 +296,7 @@
 
 /* Animation texte défilant */
 @mixin textSlider{
-  margin: 12rem 0 0 0;
+  margin: 12rem 0 3rem 0;
   display: flex;
   max-width: 100%;
   opacity: 0;
