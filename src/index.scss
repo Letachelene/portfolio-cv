@@ -627,19 +627,19 @@ main{
       @include md{
         position: static;
         margin: 0 5rem 5rem 0;
-        min-width: 100%;
+        max-width: 100%;
         height: auto;
       }
       @include sm{
         position: static;
         margin: 0 5rem 5rem 0;
-        min-width: 100%;
+        max-width: 100%;
         height: auto;
       }
       @include xs{
         position: static;
         margin: 0 5rem 5rem 0;
-        min-width: 100%;
+        max-width: 100%;
         height: auto;
       }
     }
@@ -658,7 +658,7 @@ main{
         }
       }
       @include md{
-        min-width: 100%;
+        max-width: 100%;
         height: auto;
         &:hover{
           transform: scale(1.1);
@@ -718,6 +718,9 @@ footer{
   color: #fff;
   background: var(--text);
   padding: 5rem;
+  @include sm{
+    padding: 5rem 0rem;
+  }
   @include xs{
     padding: 5rem 1.5rem;
   }

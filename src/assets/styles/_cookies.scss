@@ -2,7 +2,7 @@
 
 @mixin buttonCookie{
 
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300 !important;
     background: #fff;
     color: var(--cookie);
@@ -30,7 +30,7 @@
   background: var(--cookie);
   color: #fff;
   padding: 3rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   position: fixed;
   bottom: 0;
   p{
@@ -98,3 +98,31 @@
   }
 
 }
+
+// Page COOKIES
+
+.grid-container-page{
+  display: grid;
+  grid:
+    "header header" auto
+    "aside main" 1fr;
+    max-height: 100vh;
+    @include xs{
+      grid:
+        "header" auto
+        "main" auto
+        "aside" auto
+        / auto;
+    }
+    @include sm{
+      grid:
+      "header" auto
+      "main" auto
+      "aside" auto
+      / auto;
+    }
+  }
+
+  .header-two{
+    background: linear-gradient(to right, var(--primary-blue), var(--light-blue));
+  }

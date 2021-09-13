@@ -121,6 +121,7 @@ const scrollFunction =(e) => {
 }
 
 
+
 let scrollEvent;
 window.addEventListener('resize', () =>{
   if(window.innerWidth > 768){
