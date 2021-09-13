@@ -4,7 +4,7 @@
 @mixin xs{
   @media only screen and (max-width: 480px) {
     @content;
-    //background: pink;
+    background: pink;
   }
 }
 

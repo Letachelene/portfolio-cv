@@ -27,11 +27,10 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   background: var(--cookie);
   color: #fff;
   padding: 3rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   position: fixed;
   bottom: 0;
   p{
@@ -41,4 +40,61 @@
     color: #fff;
      text-decoration: underline;
   }
+}
+
+// Bandeau cookie : media queries
+.cookiebar{
+@include xl{
+  display: flex;
+  flex-flow: column;
+}
+@include md{
+  display: flex;
+  flex-flow: column;
+}
+@include sm{
+  display: flex;
+  flex-flow: column;
+}
+@include xs{
+  display: flex;
+  flex-flow: column;
+}
+}
+.queries-cookie{
+  @include xl{
+    display: flex;
+    margin-top: 1rem;
+  }
+  @include md{
+    display: flex;
+    margin-top: 1rem;
+  }
+  @include sm{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1rem;
+  }
+  @include xs{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1rem;
+  }
+
+}
+
+.is-hidden{
+  @include xl{
+    display: none;
+  }
+  @include md{
+    display: none;
+  }
+  @include sm{
+    display: none;
+  }
+  @include xs{
+    display: none;
+  }
+
 }

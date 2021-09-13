@@ -173,8 +173,6 @@ btnTwo.addEventListener("click", (e) =>{
   });
 
 
-
-
 doCoolStuffOne();
 doCoolStuffTwo();
 doCoolStuffThree();
