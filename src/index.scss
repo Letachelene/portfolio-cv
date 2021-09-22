@@ -791,21 +791,3 @@ footer{
     color: var(--hint);
   }
 }
-
-// Bandeau cookie : visible/hidden
-
-.cookiebar {
-@include cookieBar;
-
-.button-cookie-ok{
-  @include buttonCookie;
-}
-
-.button-cookie-no{
-  @include buttonCookie;
-}
-}
-
-.is-hidden{
-  display: none;
-}

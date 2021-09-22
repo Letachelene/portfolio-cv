@@ -14,7 +14,7 @@
     cursor: pointer;
 
       &:hover {
-        opacity: 0.7;
+        opacity: 0.5;
           }
       &:focus {
         outline-style: none;
@@ -26,7 +26,6 @@
   grid-area: copyright;
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
   background: var(--cookie);
   color: #fff;
   padding: 3rem;
@@ -99,30 +98,69 @@
 
 }
 
+// Bandeau cookie : visible/hidden
+
+.cookiebar {
+@include cookieBar;
+
+.button-cookie-ok{
+  @include buttonCookie;
+}
+
+.button-cookie-no{
+  @include buttonCookie;
+}
+}
+
+.is-hidden{
+  display: none;
+}
+
 // Page COOKIES
 
 .grid-container-page{
   display: grid;
   grid:
     "header header" auto
-    "aside main" 1fr;
+    "aside main" 1fr
+    "copyright copyright" auto;
     max-height: 100vh;
     @include xs{
       grid:
         "header" auto
         "main" auto
-        "aside" auto
-        / auto;
+        "aside aside"
+        "copyright" auto ;
     }
     @include sm{
       grid:
       "header" auto
       "main" auto
-      "aside" auto
-      / auto;
+      "aside aside"
+      "copyright" auto ;
     }
+
+    aside{
+      @include xs{
+        padding: 0;
+      }
+      @include sm{
+        padding: 0;
+      }
+    }
+
   }
+
 
   .header-two{
     background: linear-gradient(to right, var(--primary-blue), var(--light-blue));
+  }
+
+  .button-back{
+    @include buttonCookie;
+    color: var(--primary) !important;
+    border: 3px solid !important;
+    font-size: 2rem !important;
+    margin: 0 !important;
+    //color: #fff !important;
   }
