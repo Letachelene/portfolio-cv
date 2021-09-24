@@ -44,7 +44,11 @@ module.exports = {
       filename: "cookies.html",
       template: path.join(__dirname, "./src/cookies.html"),
       chunks: ["main"]
-
+    }),
+    new HtmlWebpackPlugin({
+      filename: "mlegales.html",
+      template: path.join(__dirname, "./src/mlegales.html"),
+      chunks: ["main"]
     })
   ],
   stats: "minimal",

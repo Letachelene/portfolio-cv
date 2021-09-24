@@ -26,6 +26,7 @@
   grid-area: copyright;
   width: 100%;
   display: flex;
+  flex-flow: column;
   background: var(--cookie);
   color: #fff;
   padding: 3rem;
@@ -61,23 +62,20 @@
 }
 }
 .queries-cookie{
+  margin-top: 1rem;
   @include xl{
     display: flex;
-    margin-top: 1rem;
   }
   @include md{
     display: flex;
-    margin-top: 1rem;
   }
   @include sm{
     display: flex;
     flex-flow: row wrap;
-    margin-top: 1rem;
   }
   @include xs{
     display: flex;
     flex-flow: row wrap;
-    margin-top: 1rem;
   }
 
 }
@@ -151,10 +149,15 @@
 
   }
 
-
+// Header cookies
   .header-two{
     background: linear-gradient(to right, var(--primary-blue), var(--light-blue));
   }
+
+// Header mentions légales
+.header-three{
+  background: linear-gradient(to right, var(--light), var(--primary));
+}
 
   .button-back{
     @include buttonCookie;

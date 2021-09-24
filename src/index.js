@@ -122,6 +122,8 @@ const scrollFunction =(e) => {
 
 
 
+
+
 let scrollEvent;
 window.addEventListener('resize', () =>{
   if(window.innerWidth > 768){
@@ -131,6 +133,8 @@ window.addEventListener('resize', () =>{
     scrollEvent = window.removeEventListener('scroll', scrollFunction, false);
   }
 }, false);
+
+
 
 
 /* Bouton overflow*/
