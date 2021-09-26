@@ -47,10 +47,10 @@ header{
   position: sticky;
   top: 0;
   z-index: 1;
-  /*@include xs{
-    padding: 5rem 2rem;
+  @include xs{
+    padding: 1.5rem 5rem;
   }
-  @include sm{
+  /*@include sm{
     padding: 5rem 2rem;
   }
   @include md{

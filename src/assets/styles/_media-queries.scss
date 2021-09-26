@@ -4,7 +4,7 @@
 @mixin xs{
   @media only screen and (max-width: 480px) {
     @content;
-    background: pink;
+    //background: pink;
   }
 }
 
@@ -12,7 +12,7 @@
 @mixin sm{
   @media only screen and (min-width: 481px) and (max-width: 767px) {
     @content;
-    background: orange;
+    //background: orange;
   }
 }
 
@@ -20,7 +20,7 @@
 @mixin md{
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     @content;
-    background: green;
+    //background: green;
   }
 }
 
@@ -28,7 +28,7 @@
 @mixin xl{
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     @content;
-    background: teal;
+    //background: teal;
   }
 }
 
@@ -37,6 +37,6 @@
   @media only screen and (min-width: 1200px)
    {
     @content;
-    background: grey;
+    //background: grey;
   }
 }
