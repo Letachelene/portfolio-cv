@@ -54,10 +54,25 @@ module.exports = {
   stats: "minimal",
   devtool: "source-map",
   mode: "development",
+
+
   devServer: {
-    open: false,
-    contentBase: "./dist",
-    inline: true,
-    port: 4000
+   open: true, // Pour ouvrir directement la page dans le navigateur
+     port: 4000
   }
 };
+
+/* devServer: {
+  open: false,
+  contentBase: "./dist",
+  inline: false,
+  port: 4000
+}*/
+
+/*
+devServer: {
+ open: false,
+   static: path.resolve(__dirname, './dist'),
+     port: 4000
+}
+*/
