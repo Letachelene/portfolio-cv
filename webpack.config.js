@@ -57,9 +57,11 @@ module.exports = {
 
 
   devServer: {
-   open: true, // Pour ouvrir directement la page dans le navigateur
-     port: 4000
-  }
+   open: true,
+   // contentBase: "./dist",
+   // inline: true,
+   port: 4000
+ }
 };
 
 /* devServer: {
