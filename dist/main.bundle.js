@@ -2280,7 +2280,7 @@ var scrollFunction = function scrollFunction(e) {
     document.querySelector("h1").style.padding = "0rem";
   } else {
     document.querySelector("header").style.padding = "2rem 5rem";
-    document.querySelector("header").style.height = "20rem";
+    document.querySelector("header").style.height = "22rem";
     document.querySelector("h1").style.fontSize = "4rem !important";
     document.querySelector("h1").style.padding = "0 0 1.5rem 0";
   }
