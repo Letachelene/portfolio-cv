@@ -41,7 +41,7 @@ les background blue, red, green et purple permettent de visualiser les parties d
 header{
   grid-area: header;
   background: linear-gradient(to right, var(--primary), var(--light));
-  padding: 8rem 5rem;
+  padding: 5rem;
   text-align: center;
   color: #fff;
   position: sticky;
@@ -58,7 +58,7 @@ header{
     padding: 5rem 2rem;
   }*/
   h1{
-    font-size: 5rem;
+    //font-size: 4rem !important;
     line-height: 8rem;
     font-weight: 400;
     letter-spacing: 3rem;

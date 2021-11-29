@@ -107,21 +107,18 @@ function doCoolStuffThree() {
 const scrollFunction =(e) => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.querySelector("header").style.padding = "1rem 5rem";
-    document.querySelector("header").style.height = "20rem";
-    document.querySelector("h1").style.fontSize = "4rem";
+    document.querySelector("header").style.height = "17rem";
+    document.querySelector("h1").style.fontSize = "3rem";
     document.querySelector("h1").style.padding = "0rem";
-    }
+  }
   else {
-    document.querySelector("header").style.padding = "8rem 5rem";
-    document.querySelector("header").style.height = "30rem";
-    document.querySelector("h1").style.fontSize = "6rem";
-    document.querySelector("h1").style.padding = "0 0 2rem 0";
+    document.querySelector("header").style.padding = "2rem 5rem";
+    document.querySelector("header").style.height = "20rem";
+    document.querySelector("h1").style.fontSize = "4rem !important";
+    document.querySelector("h1").style.padding = "0 0 1.5rem 0";
 
 }
 }
-
-
-
 
 
 
